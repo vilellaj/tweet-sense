@@ -1,4 +1,4 @@
-# tweet-sense https://travis-ci.org/vilellaj/tweet-sense.svg?branch=master
+# tweet-sense ![Alt text](https://travis-ci.org/vilellaj/tweet-sense.svg?branch=master)
 
 ##Sentiment Analysis over tweets 
 
