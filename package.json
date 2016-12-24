@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
+    "start:client": "http-server src/presentation/static/",
+    "build:client": "rimraf src/presentation/static/js && webpack",
     "test": "mocha"
   },
   "repository": {
