@@ -3,24 +3,23 @@
 import React from 'react';
 import axios from 'axios';
 
-export default class HomeComponent extends React.Component {
+class HomeComponent extends React.Component {
   
   constructor(props)
   {
     super(props);
     
     this.state = {query: ''};
-    
-    this.propTypes = {
-        clickEvent: React.PropTypes.func
-    };
-    
+        
     this.handleChange = this.handleChange.bind(this);
     this.findResults = this.findResults.bind(this);
   }
   
   handleChange(event) {
-    this.setState({query: event.target.value});
+    
+    let value = event.target.value;        
+    this.setState({query: value});
+    
   }
   
   findResults(e)
@@ -42,10 +41,18 @@ export default class HomeComponent extends React.Component {
     return (
       <div className="home">
         <div className="home-content">
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-          <button onClick={this.findResults}>Search</button>
+          <input type="text" value="#" className="search-input" value={this.state.value} onChange={this.handleChange} />
+          <div className="button" onClick={this.findResults}>
+            <p>Search</p>
+          </div>
         </div>
       </div>
     );
   }
 }
+
+HomeComponent.propTypes = {
+    clickEvent: React.PropTypes.func
+};
+
+export default HomeComponent;
